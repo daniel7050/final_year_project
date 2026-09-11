@@ -50,3 +50,43 @@ PPO achieved statistically significant improvements over all classical baselines
 ---
 
 ## Repository Structure
+final_year_project/
+├── nigeria_env.py          # Custom Gymnasium environment
+├── baselines.py            # EOQ, (s,S), and AHP-TOPSIS policies
+├── bdq_network.py          # Branching Dueling Q-Network architecture
+├── train_chunk.py          # PPO training script (chunked)
+├── train_bdq_chunk.py      # BDQ training script (chunked)
+├── evaluate.py             # PPO evaluation + statistical tests
+├── evaluate_bdq.py         # BDQ evaluation + statistical tests
+├── results/
+│   ├── results.json
+│   ├── results_bdq.json
+│   └── results_v2.json
+├── requirements.txt
+└── README.md
+
+---
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/daniel7050/final_year_project
+cd final_year_project
+
+# Create a virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+Required packages:
+
+gymnasium
+stable-baselines3
+torch
+numpy
+scipy
+pandas
+matplotlib
